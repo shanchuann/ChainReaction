@@ -3,6 +3,7 @@
 
 ## 构建基础智能体
 > Quickstart.py
+
 首先创建一个简单的智能体，能够回答问题并调用工具。该智能体将使用DeepSeek作为语言模型，一个基础的天气函数作为工具，以及一个简单的提示来指导其行为。
 
 对于此示例，你需要设置一个 [DeepSeek](https://platform.deepseek.com/) 账户并获取API密钥。然后，在你的终端中设置 `DEEPSEEK_API_KEY` 环境变量，或创建.env文件，通过 `python-dotenv` 加载它。
