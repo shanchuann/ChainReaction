@@ -18,12 +18,12 @@
    source langchain-env/bin/activate  # 在 Windows 上使用 `langchain-env\Scripts\activate`
    ```
 3. **安装 LangChain**
-4. 使用 pip 安装 LangChain：
+   使用 pip 安装 LangChain：
    ```bash
    pip install langchain
    ```
-5. **验证安装**
-6. 安装完成后，您可以通过以下命令验证 LangChain 是否安装成功：
+4. **验证安装**
+   安装完成后，您可以通过以下命令验证 LangChain 是否安装成功：
    ```bash
    python -c "import langchain; print(langchain.__version__)"
    ```
