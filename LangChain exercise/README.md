@@ -9,7 +9,7 @@
 
 - 通过 `pip install -qU langchain-ollama` 以便在 LangChain 中使用 Ollama 的模型。
 
-另外，需要在 Ollama 中下载一个合适的模型，比如 llama2:latest。你可以通过 `ollama list` 来查看已经下载的模型，通过 `ollama pull llama2:latest` 来下载这个模型。
+另外，需要在 Ollama 中下载一个合适的模型，比如 qwen3-vl:8b。你可以通过 `ollama list` 来查看已经下载的模型，通过 `ollama pull qwen3-vl:8b` 来下载这个模型。
 
 接下来就是编写代码了。下面的代码展示了如何使用 LangChain 和 Ollama 来生成情人节玫瑰的宣传语：
 
