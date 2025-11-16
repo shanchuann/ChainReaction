@@ -1,14 +1,23 @@
 <div align="center">
 <!-- Title: -->
 <img src="https://s2.loli.net/2025/11/15/KHgQ6NPjEUAuVZh.png">
-<h1><div align="center">ChainReaction 链式反应</h1>
+
 <a href="https://github.com/shanchuann/ChainReaction"><img src="https://img.shields.io/badge/LangChain-Learning-blue?style=flat-square" height="20" alt="LangChain Learning"></a>
 <a href="https://github.com/shanchuann/ChainReaction/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" height="20" alt="MIT License"></a>
 <a href="https://github.com/shanchuann/ChainReaction/blob/main/requirements.txt"><img src="https://img.shields.io/badge/Python-3.7%2B-yellow?style=flat-square" height="20" alt="Python 3.7+"></a>
 </div>
 
-  <h2><div align="center">专注于 LangChain 框架的学习与实践仓库，提供中文文档和可运行示例</h2>
+## 专注于 LangChain 框架的学习与实践仓库，提供中文文档和可运行示例
 
+### 大语言模型
+
+大语言模型 (LLM) 是一种基于人工智能的模型，利用深度学习技术和神经网络，通过处理海量文本数据来理解和生成自然语言内容。它们是自然语言处理 (NLP) 的核心技术，能够执行多种语言相关任务，如文本生成、翻译、情感分析和代码生成。
+
+这些模型通过训练大量数据（如数十亿个单词和短语），学习语言中的语法、语义和上下文关系。它们通常基于Transformer架构，例如 GPT（生成式预训练转换器）和 BERT（双向编码器表示），并使用注意力机制来捕捉语言中的复杂模式。
+
+### LangChain
+
+LangChain 是一个开源框架，旨在通过将其与外部数据源和计算工具集成来增强大型语言模型（LLM）的能力，例如 GPT-4。它允许开发者构建不仅能够生成文本的应用程序，还能够与外部系统交互、从私有数据库中检索信息，并根据用户输入执行特定操作。
 
 ### 仓库结构
 
@@ -51,51 +60,6 @@ python -c "import langchain; print(langchain.__version__)"
 ```
 
 - 后续学习建议：阅读官方文档、探索示例项目、加入社区交流
-
-#### 快速入门
-通过实际代码示例，从基础到进阶构建 AI 智能体，包括：
-- **基础智能体**：使用 DeepSeek 模型，定义简单天气查询工具，通过 `create_agent` 实现基本交互
-  ```python
-  # 关键代码片段
-  from langchain_openai import ChatOpenAI
-  from langchain.agents import create_agent
-  
-  model = ChatOpenAI(
-      api_key=os.getenv('DEEPSEEK_API_KEY'),
-      base_url="https://api.deepseek.com/v1",
-      model="deepseek-chat"
-  )
-  
-  agent = create_agent(model=model, tools=[get_weather], system_prompt="You are a helpful assistant")
-  ```
-- **进阶天气预报代理**：
-  - 支持双关语响应的专业角色设定
-  - 多工具调用（获取位置、查询天气）
-  - 对话记忆功能（通过 `InMemorySaver` 保持上下文）
-  - 结构化响应格式（定义 `ResponseFormat` 确保输出一致性）
-  - 上下文管理（通过 `Context` 传递用户 ID 等信息）
-
-#### 练习示例
-提供特定场景的实践案例，例如：
-- **情人节玫瑰宣传语生成**：使用 LangChain 集成 Ollama 本地模型（如 `qwen3-vl:8b`），生成创意宣传语
-  ```python
-  from langchain_ollama import ChatOllama
-  
-  llm = ChatOllama(
-      model="qwen3-vl:8b",
-      base_url="http://localhost:11434"
-  )
-  text = llm.invoke("请给我写一句情人节红玫瑰的中文宣传语")
-  print(text)
-  ```
-
-### 依赖说明
-核心依赖已在 `requirements.txt` 中定义，主要包括：
-```
-langchain~=1.0.7          # LangChain 核心框架
-langchain-openai~=1.0.3   # OpenAI/DeepSeek 等模型集成
-python-dotenv~=1.2.1      # 环境变量管理
-```
 
 ### 许可证
 本项目采用 MIT 许可证，详情参见 [LICENSE](LICENSE)。
